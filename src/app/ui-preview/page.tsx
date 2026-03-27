@@ -2,6 +2,8 @@ import Button from "@/components/ui/Button";
 import Card from "@/components/ui/Card";
 import Input from "@/components/ui/Input";
 import StatusBadge from "@/components/ui/StatusBadge";
+import ReservationForm from "@/components/reservations/ReservationForm";
+import ReservationCard from "@/components/reservations/ReservationCard";
 
 export default function UiPreviewPage() {
   return (
@@ -14,7 +16,6 @@ export default function UiPreviewPage() {
           </h1>
           <p className="text-text-secondary">Global design system preview</p>
         </section>
-
         {/* Color Palette */}
         <section>
           <h2 className="text-xl font-semibold text-text-primary mb-4">
@@ -30,7 +31,6 @@ export default function UiPreviewPage() {
             <ColorBox label="Surface" className="bg-surface border" />
           </div>
         </section>
-
         {/* Buttons */}
         <section>
           <h2 className="text-xl font-semibold text-text-primary mb-4">
@@ -60,7 +60,6 @@ export default function UiPreviewPage() {
             </div>
           </div>
         </section>
-
         {/* Inputs */}
         <section>
           <h2 className="text-xl font-semibold text-text-primary mb-4">
@@ -75,7 +74,6 @@ export default function UiPreviewPage() {
             </div>
           </Card>
         </section>
-
         {/* Status Badge */}
         <section>
           <h2 className="text-xl font-semibold text-text-primary mb-4">
@@ -93,7 +91,6 @@ export default function UiPreviewPage() {
             <StatusBadge status="partial" />
           </div>
         </section>
-
         {/* Card Example */}
         <section>
           <h2 className="text-xl font-semibold text-text-primary mb-4">
@@ -118,6 +115,41 @@ export default function UiPreviewPage() {
             </div>
           </Card>
         </section>
+        {/* Reservation Form */}
+        <section>
+          <h2 className="text-xl font-semibold text-text-primary mb-4">
+            Reservation Form
+          </h2>
+
+          <div className="max-w-md">
+            <ReservationForm />
+          </div>
+        </section>
+        {/* Reservation Card */}
+        <section>
+          <h2 className="text-xl font-semibold text-text-primary mb-4">
+            Reservation Card
+          </h2>
+
+          <div className="grid gap-4 max-w-md">
+            <ReservationCard
+              guestName="Olivia"
+              date="20 May 2026"
+              time="14:00"
+              guestCount={4}
+              status="pending"
+            />
+
+            <ReservationCard
+              guestName="Emma"
+              date="21 May 2026"
+              time="16:00"
+              guestCount={2}
+              status="approved"
+            />
+          </div>
+        </section>
+        ;
       </div>
     </main>
   );
@@ -131,7 +163,3 @@ function ColorBox({ label, className }: { label: string; className: string }) {
     </div>
   );
 }
-
-<button className="hover:[animation:wiggle_0.35s_ease-in-out] rounded-xl bg-primary px-4 py-2 text-white">
-  Test Wiggle
-</button>;
