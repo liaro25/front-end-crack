@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "reservationCode": "RSV-001",
+    "guestName": "Olivia",
+    "guestEmail": "olivia@example.com",
+    "guestPhone": "081234567890",
+    "reservationDate": "2026-05-20",
+    "startTime": "14:00",
+    "guestCount": 4,
+    "status": "pending",
+    "paymentStatus": "unpaid"
+  },
+  {
+    "id": 2,
+    "reservationCode": "RSV-002",
+    "guestName": "Emma",
+    "guestEmail": "emma@example.com",
+    "guestPhone": "081234567891",
+    "reservationDate": "2026-05-21",
+    "startTime": "16:00",
+    "guestCount": 2,
+    "status": "approved",
+    "paymentStatus": "paid"
+  },
+  {
+    "id": 3,
+    "reservationCode": "RSV-003",
+    "guestName": "Sophia",
+    "guestEmail": "sophia@example.com",
+    "guestPhone": "081234567892",
+    "reservationDate": "2026-05-22",
+    "startTime": "12:00",
+    "guestCount": 3,
+    "status": "completed",
+    "paymentStatus": "paid"
+  },
+  {
+    "id": 4,
+    "reservationCode": "RSV-004",
+    "guestName": "Isabella",
+    "guestEmail": "isabella@example.com",
+    "guestPhone": "081234567893",
+    "reservationDate": "2026-05-23",
+    "startTime": "10:00",
+    "guestCount": 2,
+    "status": "cancelled",
+    "paymentStatus": "refunded"
+  }
+]

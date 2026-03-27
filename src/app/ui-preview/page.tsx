@@ -4,6 +4,7 @@ import Input from "@/components/ui/Input";
 import StatusBadge from "@/components/ui/StatusBadge";
 import ReservationForm from "@/components/reservations/ReservationForm";
 import ReservationCard from "@/components/reservations/ReservationCard";
+import OrderCard from "@/components/reservations/OrderCard";
 
 export default function UiPreviewPage() {
   return (
@@ -91,47 +92,50 @@ export default function UiPreviewPage() {
             <StatusBadge status="partial" />
           </div>
         </section>
-        {/* Card Example */}
         <section>
-          <h2 className="text-xl font-semibold text-text-primary mb-4">
-            Card Example
-          </h2>
-
-          <Card>
-            <h3 className="text-lg font-semibold text-text-primary">
-              Reservation Example
-            </h3>
-
-            <div className="mt-3 space-y-2 text-sm">
-              <p>Guest: Olivia</p>
-              <p>Date: 20 May 2026</p>
-              <p>Guests: 4</p>
-              <StatusBadge status="pending" />
-            </div>
-
-            <div className="mt-4 flex gap-2">
-              <Button>Approve</Button>
-              <Button variant="outline">Reject</Button>
-            </div>
-          </Card>
-        </section>
-        {/* Reservation Form */}
-        <section>
-          <h2 className="text-xl font-semibold text-text-primary mb-4">
-            Reservation Form
+          <h2 className="mb-4 text-xl font-semibold text-text-primary">
+            Order Card
           </h2>
 
           <div className="max-w-md">
-            <ReservationForm />
+            <OrderCard
+              items={[
+                {
+                  id: 1,
+                  type: "package",
+                  name: "Sweet Package",
+                  quantity: 1,
+                  price: 120000,
+                },
+                {
+                  id: 2,
+                  type: "item",
+                  name: "Coffee",
+                  quantity: 2,
+                  price: 30000,
+                },
+                {
+                  id: 3,
+                  type: "item",
+                  name: "Croissant",
+                  quantity: 1,
+                  price: 35000,
+                },
+              ]}
+              subtotal={215000}
+              tax={21500}
+              totalAmount={236500}
+              paymentAmount={23650}
+              paymentLabel="Deposit Due Now"
+            />
           </div>
         </section>
-        {/* Reservation Card */}
         <section>
-          <h2 className="text-xl font-semibold text-text-primary mb-4">
+          <h2 className="mb-4 text-xl font-semibold text-text-primary">
             Reservation Card
           </h2>
 
-          <div className="grid gap-4 max-w-md">
+          <div className="grid max-w-md gap-4">
             <ReservationCard
               guestName="Olivia"
               date="20 May 2026"
@@ -139,7 +143,6 @@ export default function UiPreviewPage() {
               guestCount={4}
               status="pending"
             />
-
             <ReservationCard
               guestName="Emma"
               date="21 May 2026"
@@ -147,6 +150,15 @@ export default function UiPreviewPage() {
               guestCount={2}
               status="approved"
             />
+          </div>
+        </section>
+        <section>
+          <h2 className="mb-4 text-xl font-semibold text-text-primary">
+            Reservation Form
+          </h2>
+
+          <div className="max-w-md">
+            <ReservationForm />
           </div>
         </section>
         ;
