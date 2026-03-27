@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF8F1;
+  --foreground: #4A3428;
+}
+
+@theme inline {
+  /* Macaron Palette */
+  --color-primary: #F4A7B9;      /* Strawberry Pink */
+  --color-secondary: #C9B6E4;    /* Lavender / Ube */
+  --color-accent: #BFE3C0;       /* Pistachio Mint */
+  --color-accent2: #F7E58D;      /* Lemon Yellow */
+
+  /* Neutral */
+  --color-background: #FFF8F1;   /* Cream */
+  --color-surface: #FFFFFF;      /* Card */
+  --color-border-soft: #EBDDD1;
+
+  /* Text */
+  --color-text-primary: #4A3428; 
+  --color-text-secondary: #6B7280;
+
+  /* Font */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans);
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-2deg);
+  }
+  75% {
+    transform: rotate(2deg);
+  }
+}
