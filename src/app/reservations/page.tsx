@@ -1,6 +1,5 @@
 import ReservationCard from "@/components/reservations/ReservationCard";
 import reservations from "@/lib/mocks/reservations.json";
-import Link from "next/link";
 
 export default function ReservationsPage() {
   return (
